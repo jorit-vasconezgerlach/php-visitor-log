@@ -3,7 +3,8 @@
           $logFilePath = 'logFile.json';
           // Configure Data To Log
           $logData = array(
-                    "user" => $_SERVER['HTTP_USER_AGENT']
+                    "user" => $_SERVER['HTTP_USER_AGENT'],
+                    "time" => date("Y.m.d H:i:s")
           );
           // Log [Start]
           $logFile = json_decode(file_get_contents($logFilePath), true);
